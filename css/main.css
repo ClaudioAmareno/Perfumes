@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", "Fraunces", serif;
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rem;
+  height: 45.5rem;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+}
+.card__img-desktop {
+  height: 100%;
+}
+.card__img-mobile {
+  display: none;
+}
+.card__container {
+  height: 100%;
+  width: 100%;
+}
+.card__container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__container-text-title {
+  padding: 3em 0 0 2em;
+  align-self: start;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: hsl(228deg, 12%, 48%);
+}
+.card__container-text-name {
+  font-family: "Fraunces";
+  padding: 0.8em 2em 0 0.8em;
+  font-size: 3em;
+  line-height: 1;
+}
+.card__container-text-description {
+  padding: 2.5em 3em 0 2em;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: hsl(228deg, 12%, 48%);
+}
+.card__container-down {
+  display: flex;
+  align-items: center;
+  padding: 2.4em 0 0 2.6em;
+}
+.card__container-down-price {
+  font-family: "Fraunces";
+  font-size: 3em;
+  color: hsl(158deg, 36%, 37%);
+}
+.card__container-down-second-price {
+  padding-left: 1.5em;
+  font-size: 1.4em;
+  text-decoration: line-through;
+  color: hsl(228deg, 12%, 48%);
+}
+.card__container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5em;
+  width: 80%;
+  margin: 2em 2em 0 2em;
+  font-weight: 700;
+  background-color: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card__container-btn-cart {
+  padding-right: 1em;
+}
+
+@media (max-width: 576px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    margin: 2em 0 2em 0;
+  }
+  .card__img {
+    width: auto;
+  }
+  .card__img-desktop {
+    display: none;
+  }
+  .card__img-mobile {
+    display: block;
+    width: 100%;
+  }
+  .card__container-text-name {
+    padding-right: 0.2em;
+  }
+  .card__container-text-description {
+    padding-right: 2em;
+  }
+  .card__container button {
+    margin-bottom: 2em;
+    width: 85%;
+  }
+}/*# sourceMappingURL=main.css.map */

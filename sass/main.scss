@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Montserrat', 'Fraunces', serif;
+	background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60rem;
+	height: 45.5rem;
+	background-color: white;
+	border-radius: 12px;
+	overflow: hidden;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+
+		&-desktop {
+			height: 100%;
+		}
+
+		&-mobile {
+			display: none;
+		}
+	}
+
+	&__container {
+		height: 100%;
+		width: 100%;
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			&-title {
+				padding: 3em 0 0 2em;
+				align-self: start;
+				font-size: 1.2em;
+				text-transform: uppercase;
+				letter-spacing: 0.4em;
+				color: hsl(228deg, 12%, 48%);
+			}
+
+			&-name {
+				font-family: 'Fraunces';
+				padding: 0.8em 2em 0 0.8em;
+				font-size: 3em;
+				line-height: 1;
+			}
+
+			&-description {
+				padding: 2.5em 3em 0 2em;
+				font-size: 1.4rem;
+				line-height: 1.5;
+				color: hsl(228deg, 12%, 48%);
+			}
+		}
+
+		&-down {
+			display: flex;
+			align-items: center;
+			padding: 2.4em 0 0 2.6em;
+
+			&-price {
+				font-family: 'Fraunces';
+				font-size: 3em;
+				color: hsl(158deg, 36%, 37%);
+			}
+
+			&-second-price {
+				padding-left: 1.5em;
+				font-size: 1.4em;
+				text-decoration: line-through;
+				color: hsl(228deg, 12%, 48%);
+			}
+		}
+
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 3.5em;
+			width: 80%;
+			margin: 2em 2em 0 2em;
+			font-weight: 700;
+			background-color: hsl(158deg, 36%, 37%);
+			color: hsl(0deg, 0%, 100%);
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		&-btn {
+			&-cart {
+				padding-right: 1em;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.card {
+		display: flex;
+		flex-direction: column;
+		width: 90vw;
+		height: auto;
+		margin: 2em 0 2em 0;
+
+		&__img {
+			width: auto;
+
+			&-desktop {
+				display: none;
+			}
+			
+			&-mobile {
+				display: block;
+				width: 100%;
+			}
+		}
+		&__container {
+			&-text {
+				&-name{
+					padding-right: .2em;
+				}
+
+				&-description{
+					padding-right: 2em;
+				}
+			}
+			button{
+				margin-bottom: 2em;
+				width: 85%;
+			}
+		}
+	}
+}
